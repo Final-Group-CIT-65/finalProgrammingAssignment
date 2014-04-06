@@ -30,6 +30,8 @@ public class NumberCompare extends Activity {
 	int Field3_Int;
 	
 	
+	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -39,17 +41,9 @@ public class NumberCompare extends Activity {
          computeButton.setOnClickListener(new View.OnClickListener() {
              public void onClick(View v) {
              //CALL COMPUTATION METHOD TO FIND THE LARGEST INTEGER
-            	 if(Integer.toString(R.id.editText1) != null && Integer.toString(R.id.editText2) != null && Integer.toString(R.id.editText3) != null){
-            		 
-            	 System.out.println("Testing 123");
-            	 Compute();
-            	 
-            	 }
-            	 else{
-            		 
-            		 Toast.makeText(getBaseContext(), "Please fill out all three fields!",
-								Toast.LENGTH_LONG).show();
-            	 }
+
+            			 Compute();
+
              }
          });
          
@@ -86,6 +80,7 @@ public class NumberCompare extends Activity {
 				
 				//This method is called after Quit is pressed
 						public void Quit(){
+						
 
 							}
 	
