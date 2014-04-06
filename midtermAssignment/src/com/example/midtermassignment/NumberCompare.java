@@ -19,6 +19,8 @@ public class NumberCompare extends Activity {
          computeButton.setOnClickListener(new View.OnClickListener() {
              public void onClick(View v) {
              //CALL COMPUTATION METHOD TO FIND THE LARGEST INTEGER
+            	 System.out.print("Testing 123");
+            	 //TODO: Create if statement that checks if all fields have a value
             	 Num.Compute();
              }
          });
@@ -46,8 +48,13 @@ public class NumberCompare extends Activity {
 		
 		//This is the bitch class where the program gets laid
 				public static void Compute(){
-										
-
+				
+					String InputBox1 = Integer.toString(R.id.textView1);
+					String InputBox2 = Integer.toString(R.id.textView2);
+					String InputBox3 = Integer.toString(R.id.textView3);
+					
+					System.out.println(InputBox1+InputBox2+InputBox3);
+					
 					
 		}
 		
