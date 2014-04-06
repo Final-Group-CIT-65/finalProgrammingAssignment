@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">midtermAssignment</string>
+    <string name="action_settings">Settings</string>
+    <string name="topMostCaption">TYPE THE NUMS</string>
+    <string name="subCaption">Please enter three numbers.</string>
+
+</resources>
