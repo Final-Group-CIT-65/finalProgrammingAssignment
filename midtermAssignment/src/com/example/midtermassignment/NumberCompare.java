@@ -59,7 +59,7 @@ public class NumberCompare extends Activity {
          quitButton.setOnClickListener(new View.OnClickListener() {
              public void onClick(View v) {
              //QUIT PROGRAM
-            	 Quit();
+            	 Minimize();
              }
          });
          
@@ -74,14 +74,23 @@ public class NumberCompare extends Activity {
 				//This method is called after Reset is pressed
 						public void Reset(){
 			
+							
+							final TextView Field1Reset = (TextView) findViewById(R.id.editText1);
+							Field1Reset.setText(String.valueOf(""));
+							
+							final TextView Field2Reset = (TextView) findViewById(R.id.editText2);
+							Field2Reset.setText(String.valueOf(""));
+							
+							final TextView Field3Reset = (TextView) findViewById(R.id.editText3);
+							Field3Reset.setText(String.valueOf(""));
 					}
 				
 				
 				
 				//This method is called after Quit is pressed
-						public void Quit(){
+						public void Minimize(){
 						
-
+								finish();
 							}
 	
 					
@@ -123,8 +132,8 @@ public class NumberCompare extends Activity {
 							
 						//	int LargestNumber = LARGEST NUMBER AS DETERMINED BY SORTING ALGORITHM;
 							
-							final TextView mTextView = (TextView) findViewById(R.id.textView4);
-						mTextView.setText(String.valueOf(Field3_Int));
+							final TextView LargestNumOutput = (TextView) findViewById(R.id.textView4);
+						LargestNumOutput.setText(String.valueOf(Field3_Int));
 					
 					
 					

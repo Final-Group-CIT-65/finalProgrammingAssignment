@@ -15,6 +15,6 @@
     <!-- THE CRIMEA THE CRIMEAN PENINSULASJIOEWF -->
     <string name="resetButton">Clear all</string>
     <string name="computeButton">Find Largest Number</string>
-    <string name="quitButton">Quit Nums</string>
+    <string name="quitButton">Minimize Nums</string>
 
 </resources>
