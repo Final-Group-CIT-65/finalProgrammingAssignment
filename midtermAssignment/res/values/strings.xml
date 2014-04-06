@@ -13,8 +13,8 @@
     <string name="outputStream">-oStream-</string>
     
     <!-- THE CRIMEA THE CRIMEAN PENINSULASJIOEWF -->
-    <string name="resetButton">RESET</string>
-    <string name="computeButton">FIND LARGEST</string>
-    <string name="quitButton">DONE ENTERING NUMS FOR TODAY?</string>
+    <string name="resetButton">Clear all</string>
+    <string name="computeButton">Find Largest Number</string>
+    <string name="quitButton">Quit Nums</string>
 
 </resources>
