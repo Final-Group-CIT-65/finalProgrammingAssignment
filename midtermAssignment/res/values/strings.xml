@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">midtermAssignment</string>
+    <string name="app_name">The NUMS</string>
     <string name="action_settings">Settings</string>
+    
+    <!-- THE RUSSIA -->
     <string name="topMostCaption">TYPE THE NUMS</string>
     <string name="subCaption">Please enter three numbers.</string>
+    
+    <!-- THE UKRAINE THE UKRAINE -->
+    <string name="outputCaption">The largest num is: </string>
+    <string name="outputStream">-oStream-</string>
+    
+    <!-- THE CRIMEA THE CRIMEAN PENINSULASJIOEWF -->
+    <string name="resetButton">RESET</string>
+    <string name="computeButton">FIND LARGEST</string>
+    <string name="quitButton">DONE ENTERING NUMS FOR TODAY?</string>
 
 </resources>

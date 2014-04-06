@@ -10,11 +10,12 @@
 
     <application
         android:allowBackup="true"
-        android:theme="@android:style/Theme.NoTitleBar">
-
-		
+        android:icon="@drawable/nums_logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.midtermassignment.NumberCompare" >
+            android:name="com.example.midtermassignment.NumberCompare"
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
