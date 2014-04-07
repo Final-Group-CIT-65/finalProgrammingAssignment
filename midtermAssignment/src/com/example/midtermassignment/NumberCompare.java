@@ -28,6 +28,7 @@ public class NumberCompare extends Activity {
 	int Field1_Int;
 	int Field2_Int;
 	int Field3_Int;
+	int FieldTemp_Int;
 	
 	
 	
@@ -41,8 +42,25 @@ public class NumberCompare extends Activity {
          computeButton.setOnClickListener(new View.OnClickListener() {
              public void onClick(View v) {
              //CALL COMPUTATION METHOD TO FIND THE LARGEST INTEGER
-
-            			 Compute();
+            	 	///////////////////
+            	 editText1 = (EditText) findViewById(R.id.editText1);
+            	 String Field1 = editText1.getText().toString().trim();
+            	 
+            	 editText2 = (EditText) findViewById(R.id.editText2);
+            	 String Field2 = editText2.getText().toString().trim();
+            	 
+            	 editText3 = (EditText) findViewById(R.id.editText3);
+            	 String Field3 = editText3.getText().toString().trim();
+            	 
+            	 if((Field1.length() >= 1) && (Field2.length() >= 1) && (Field3.length() >= 1)){
+            		 Compute();
+            	 }
+            	 
+            	 else{
+            		
+            		 final TextView LargestNumOutput = (TextView) findViewById(R.id.textView4);
+            		 LargestNumOutput.setText("No. Enter THREE nums. ");
+            	 }
 
              }
          });
@@ -121,6 +139,13 @@ public class NumberCompare extends Activity {
 						 
 						 
 							//PUT THE SORTING THING HERE
+						 if(Field1_Int > Field2_Int && Field1_Int> Field3_Int)
+							 FieldTemp_Int = Field1_Int; 
+						 else if(Field2_Int > Field1_Int && Field2_Int> Field3_Int)
+							 FieldTemp_Int = Field2_Int;
+						 else
+							 FieldTemp_Int = Field3_Int;
+						 
 							
 							//This collects the three numbers and spits them out in a toast notification.
 							String TextCompilation = ("Your nums are "+Field1_Int+", "+Field2_Int+", and "+Field3_Int);
@@ -133,7 +158,7 @@ public class NumberCompare extends Activity {
 						//	int LargestNumber = LARGEST NUMBER AS DETERMINED BY SORTING ALGORITHM;
 							
 							final TextView LargestNumOutput = (TextView) findViewById(R.id.textView4);
-						LargestNumOutput.setText(String.valueOf(Field3_Int));
+						LargestNumOutput.setText(String.valueOf(FieldTemp_Int));
 					
 					
 					
