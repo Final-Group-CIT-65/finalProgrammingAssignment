@@ -123,6 +123,7 @@
         android:layout_alignParentTop="false"
         android:layout_toLeftOf="@+id/textView2"
         android:baselineAlignBottom="true"
+        android:contentDescription="@string/LogoDesc"
         android:cropToPadding="true"
         android:src="@drawable/nums_logo" />
 

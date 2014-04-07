@@ -16,5 +16,6 @@
     <string name="resetButton">Clear all</string>
     <string name="computeButton">Find Largest Number</string>
     <string name="quitButton">Minimize Nums</string>
+    <string name="LogoDesc">Logo</string>
 
 </resources>

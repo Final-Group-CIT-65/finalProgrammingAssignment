@@ -101,6 +101,9 @@ public class NumberCompare extends Activity {
 							
 							final TextView Field3Reset = (TextView) findViewById(R.id.editText3);
 							Field3Reset.setText(String.valueOf(""));
+							
+							final TextView LargestNumOutput = (TextView) findViewById(R.id.textView4);
+							LargestNumOutput.setText(R.string.outputStream);
 					}
 				
 				
