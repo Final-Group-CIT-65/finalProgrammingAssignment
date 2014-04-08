@@ -146,8 +146,18 @@ public class NumberCompare extends Activity {
 							 FieldTemp_Int = Field1_Int; 
 						 else if(Field2_Int > Field1_Int && Field2_Int> Field3_Int)
 							 FieldTemp_Int = Field2_Int;
-						 else
+						 else if(Field3_Int > Field1_Int && Field3_Int> Field2_Int)
 							 FieldTemp_Int = Field3_Int;
+						 else if(Field1_Int == Field2_Int && Field1_Int> Field3_Int)
+							 FieldTemp_Int = Field1_Int;
+						 else if(Field1_Int == Field3_Int && Field1_Int> Field2_Int)
+							 FieldTemp_Int = Field1_Int;
+						 else if(Field2_Int == Field3_Int && Field2_Int> Field1_Int)
+							 FieldTemp_Int = Field2_Int;
+						 else if(Field1_Int == Field2_Int && Field1_Int == Field3_Int)
+							 FieldTemp_Int = Field1_Int;
+						 else
+							 FieldTemp_Int = 0; // This should never happen. 
 						 
 							
 							//This collects the three numbers and spits them out in a toast notification.
