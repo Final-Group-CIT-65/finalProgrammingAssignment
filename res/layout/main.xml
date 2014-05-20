@@ -14,15 +14,17 @@
 
         <TextView
             android:id="@+id/outputField"
-            android:layout_width="wrap_content"
-            android:layout_height="60dip"
+            android:layout_width="fill_parent"
+            
+            android:layout_height="55dip"
             android:layout_marginTop="17dp"
             android:background="@color/bg_color"
-            android:padding="10dp"
+            android:padding="12.5dp"
             android:text="@string/output"
             android:textColor="@color/input_text_color"
             android:textSize="24sp"
-            android:typeface="monospace" />
+            android:typeface="monospace"
+            android:layout_weight="4" />
 
     </TableRow>
     
