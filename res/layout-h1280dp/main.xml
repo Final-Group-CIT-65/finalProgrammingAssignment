@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+    android:stretchColumns="1"
+    tools:context=".SimpleCalc" >
+
+    <!-- OUTPUT FIELD -->
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/outputField"
+            android:layout_width="fill_parent"
+            android:layout_height="100dip"
+            android:layout_marginTop="17dp"
+            android:layout_weight="4"
+            android:background="@color/bg_color"
+            android:padding="25dp"
+            android:text="@string/output"
+            android:textColor="@color/input_text_color"
+            android:textSize="24sp"
+            android:typeface="monospace" />
+    </TableRow>
+
+    <!-- BUTTONS -->
+
+    <TableRow>
+
+        <!-- Column 1-2 -->
+
+        <Button
+            android:id="@+id/buttonReset"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dip"
+            android:layout_weight="1"
+            android:background="@color/bg_color"
+            android:padding="30dip"
+            android:text="@string/button_reset"
+            android:textColor="@color/input_text_color"
+            android:typeface="monospace" 
+            android:textSize="24sp"/>
+
+        <!-- Column 3-4 -->
+
+        <Button
+            android:id="@+id/buttonDelete"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dip"
+            android:layout_weight="1"
+            android:background="@color/bg_color"
+            android:padding="10dip"
+            android:text="@string/button_delete"
+            android:textColor="@color/input_text_color"
+            android:typeface="monospace" 
+            android:textSize="24sp"/>
+    </TableRow>
+
+    <TableRow>
+
+        <!-- Column 1 -->
+
+        <Button
+            android:id="@+id/buttonSeven"
+            android:layout_width="0dip"
+            android:layout_height="180dip"
+            android:layout_margin="4dip"
+            android:layout_weight="1"
+            android:background="@color/bg_color"
+            android:padding="10dip"
+            android:text="@string/button_seven"
+            android:textColor="@color/input_text_color"
+            android:typeface="monospace" 
+            android:textSize="24sp"/>
+
+        <!-- Column 2 -->
+
+        <Button
+            android:id="@+id/buttonEight"
+            android:layout_width="0dip"
+            android:layout_height="180dip"
+            android:layout_margin="4dip"
+            android:layout_weight="1"
+            android:background="@color/bg_color"
+            android:padding="10dip"
+            android:text="@string/button_eight"
+            android:textColor="@color/input_text_color"
+            android:typeface="monospace" 
+            android:textSize="24sp"/>
+
+        <!-- Column 3 -->
+
+        <Button
+            android:id="@+id/buttonNine"
+            android:layout_width="0dip"
+            android:layout_height="180dip"
+            android:layout_margin="4dip"
+            android:layout_weight="1"
+            android:background="@color/bg_color"
+            android:padding="10dip"
+            android:text="@string/button_nine"
+            android:textColor="@color/input_text_color"
+            android:typeface="monospace" 
+            android:textSize="24sp"/>
+
+        <!-- Column 4 -->
+
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="0dip"
+            android:layout_height="180dip"
+            android:layout_margin="4dip"
+            android:layout_weight="1"
+            android:background="@color/bg_color"
+            android:padding="10dp"
+            android:text="@string/button_add"
+            android:textColor="@color/input_text_color"
+            android:typeface="monospace" 
+            android:textSize="24sp"/>
+    </TableRow>
+
+    <TableRow>
+
+        <!-- Column 1 -->
+
+        <Button
+            android:id="@+id/buttonFour"
+            android:layout_width="0dip"
+            android:layout_height="180dip"
+            android:layout_margin="4dip"
+            android:layout_weight="1"
+            android:background="@color/bg_color"
+            android:padding="10dip"
+            android:text="@string/button_four"
+            android:textColor="@color/input_text_color"
+            android:typeface="monospace" 
+            android:textSize="24sp"/>
+
+        <!-- Column 2 -->
+
+        <Button
+            android:id="@+id/buttonFive"
+            android:layout_width="0dip"
+            android:layout_height="180dip"
+            android:layout_margin="4dip"
+            android:layout_weight="1"
+            android:background="@color/bg_color"
+            android:padding="10dip"
+            android:text="@string/button_five"
+            android:textColor="@color/input_text_color"
+            android:typeface="monospace" 
+            android:textSize="24sp"/>
+
+        <!-- Column 3 -->
+
+        <Button
+            android:id="@+id/buttonSix"
+            android:layout_width="0dip"
+            android:layout_height="180dip"
+            android:layout_margin="4dip"
+            android:layout_weight="1"
+            android:background="@color/bg_color"
+            android:padding="10dip"
+            android:text="@string/button_six"
+            android:textColor="@color/input_text_color"
+            android:typeface="monospace"
+            android:textSize="24sp" />
+
+        <!-- Column 4 -->
+
+        <Button
+            android:id="@+id/buttonSubtract"
+            android:layout_width="0dip"
+            android:layout_height="180dip"
+            android:layout_margin="4dip"
+            android:layout_weight="1"
+            android:background="@color/bg_color"
+            android:padding="10dip"
+            android:text="@string/button_subtract"
+            android:textColor="@color/input_text_color"
+            android:typeface="monospace" 
+            android:textSize="24sp"/>
+    </TableRow>
+
+    <TableRow>
+
+        <!-- Column 1 -->
+
+        <Button
+            android:id="@+id/buttonOne"
+            android:layout_width="0dip"
+            android:layout_height="180dip"
+            android:layout_margin="4dip"
+            android:layout_weight="1"
+            android:background="@color/bg_color"
+            android:padding="10dip"
+            android:text="@string/button_one"
+            android:textColor="@color/input_text_color"
+            android:typeface="monospace"
+            android:textSize="24sp" />
+
+        <!-- Column 2 -->
+
+        <Button
+            android:id="@+id/buttonTwo"
+            android:layout_width="0dip"
+            android:layout_height="180dip"
+            android:layout_margin="4dip"
+            android:layout_weight="1"
+            android:background="@color/bg_color"
+            android:padding="10dip"
+            android:text="@string/button_two"
+            android:textColor="@color/input_text_color"
+            android:typeface="monospace"
+            android:textSize="24sp" />
+
+        <!-- Column 3 -->
+
+        <Button
+            android:id="@+id/buttonThree"
+            android:layout_width="0dip"
+            android:layout_height="180dip"
+            android:layout_margin="4dip"
+            android:layout_weight="1"
+            android:background="@color/bg_color"
+            android:padding="10dip"
+            android:text="@string/button_three"
+            android:textColor="@color/input_text_color"
+            android:typeface="monospace" 
+            android:textSize="24sp"/>
+
+        <!-- Column 4 -->
+
+        <Button
+            android:id="@+id/buttonMultiply"
+            android:layout_width="0dip"
+            android:layout_height="180dip"
+            android:layout_margin="4dip"
+            android:layout_weight="1"
+            android:background="@color/bg_color"
+            android:padding="10dip"
+            android:text="@string/button_multiply"
+            android:textColor="@color/input_text_color"
+            android:typeface="monospace"
+            android:textSize="24sp" />
+    </TableRow>
+
+    <TableRow>
+
+        <!-- Column 1 -->
+
+        <Button
+            android:id="@+id/buttonZero"
+            android:layout_width="0dip"
+            android:layout_height="180dip"
+            android:layout_margin="4dip"
+            android:layout_weight="1"
+            android:background="@color/bg_color"
+            android:padding="10dip"
+            android:text="@string/button_zero"
+            android:textColor="@color/input_text_color"
+            android:typeface="monospace" 
+            android:textSize="24sp"/>
+
+        <!-- Column 2 -->
+
+        <Button
+            android:id="@+id/buttonDecimal"
+            android:layout_width="0dip"
+            android:layout_height="180dip"
+            android:layout_margin="4dip"
+            android:layout_weight="1"
+            android:background="@color/bg_color"
+            android:padding="10dip"
+            android:text="@string/button_decimal"
+            android:textColor="@color/input_text_color"
+            android:typeface="monospace" 
+            android:textSize="24sp"/>
+
+        <!-- Column 3 -->
+
+        <Button
+            android:id="@+id/buttonEquals"
+            android:layout_width="0dip"
+            android:layout_height="180dip"
+            android:layout_margin="4dip"
+            android:layout_weight="1"
+            android:background="@color/bg_color"
+            android:padding="10dip"
+            android:text="@string/button_equals"
+            android:textColor="@color/input_text_color"
+            android:typeface="monospace" 
+            android:textSize="24sp"/>
+
+        <!-- Column 4 -->
+
+        <Button
+            android:id="@+id/buttonDivide"
+            android:layout_width="0dip"
+            android:layout_height="180dip"
+            android:layout_margin="4dip"
+            android:layout_weight="1"
+            android:background="@color/bg_color"
+            android:padding="10dip"
+            android:text="@string/button_divide"
+            android:textColor="@color/input_text_color"
+            android:typeface="monospace"
+            android:textSize="24sp" />
+    </TableRow>
+
+</TableLayout>
