@@ -5,9 +5,12 @@
     <string name="action_settings">Settings</string>
     
     
+    <!-- Temp strings -->
+    <string name="output">-OUTPUT-</string>
     
-    <string name="output">-</string>
     
+    
+    <!-- Not temp strings -->
     <string name="button_delete">DELETE</string>
     <string name="button_reset">RESET</string>
     <string name="button_one">1</string>

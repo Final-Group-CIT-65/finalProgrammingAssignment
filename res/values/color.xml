@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_color">#212121</color>
+    <color name="input_text_color">#FFF</color>
+    <color name="output_text_color">#FFF</color> <!-- #009999 works as well... -->
+</resources>

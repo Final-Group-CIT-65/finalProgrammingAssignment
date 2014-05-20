@@ -4,7 +4,8 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:stretchColumns="1">
+    android:stretchColumns="1"
+    android:background="@color/bg_color">
  
     
     <!-- OUTPUT FIELD -->
@@ -16,10 +17,10 @@
             android:layout_width="wrap_content"
             android:layout_height="60dip"
             android:layout_marginTop="17dp"
-            android:background="#000"
+            android:background="@color/bg_color"
             android:padding="10dp"
             android:text="@string/output"
-            android:textColor="#009999"
+            android:textColor="@color/input_text_color"
             android:textSize="24sp"
             android:typeface="monospace" />
 
@@ -38,10 +39,10 @@
             android:layout_height="wrap_content"
             android:layout_margin="4dip"
             android:layout_weight="1"
-            android:background="#000"
+            android:background="@color/bg_color"
             android:padding="10dip"
             android:text="@string/button_reset"
-            android:textColor="#FFF"
+            android:textColor="@color/input_text_color"
             android:typeface="monospace" />
         
       <!-- Column 2 -->
@@ -52,10 +53,10 @@
           android:layout_height="wrap_content"
           android:layout_margin="4dip"
           android:layout_weight="1"
-          android:background="#000"
+          android:background="@color/bg_color"
           android:padding="10dip"
           android:text="@string/button_delete"
-          android:textColor="#FFF"
+          android:textColor="@color/input_text_color"
           android:typeface="monospace" />
 
     </TableRow>
@@ -69,10 +70,10 @@
           android:layout_height="70dip"
           android:layout_margin="4dip"
           android:layout_weight="1"
-          android:background="#000"
+          android:background="@color/bg_color"
           android:padding="10dip"
           android:text="@string/button_seven"
-          android:textColor="#FFF"
+          android:textColor="@color/input_text_color"
           android:typeface="monospace" />
           
       <!-- Column 2 -->
@@ -83,10 +84,10 @@
           android:layout_height="70dip"
           android:layout_margin="4dip"
           android:layout_weight="1"
-          android:background="#000"
+          android:background="@color/bg_color"
           android:padding="10dip"
           android:text="@string/button_eight"
-          android:textColor="#FFF"
+          android:textColor="@color/input_text_color"
           android:typeface="monospace" />
           
       <!-- Column 3 -->
@@ -97,10 +98,10 @@
           android:layout_height="70dip"
           android:layout_margin="4dip"
           android:layout_weight="1"
-          android:background="#000"
+          android:background="@color/bg_color"
           android:padding="10dip"
           android:text="@string/button_nine"
-          android:textColor="#FFF"
+          android:textColor="@color/input_text_color"
           android:typeface="monospace" />
 
        <!-- Column 4 -->
@@ -111,10 +112,10 @@
           android:layout_height="70dip"
           android:layout_margin="4dip"
           android:layout_weight="1"
-          android:background="#000"
+          android:background="@color/bg_color"
           android:padding="10dp"
           android:text="@string/button_add"
-          android:textColor="#FFF"
+          android:textColor="@color/input_text_color"
           android:typeface="monospace" />
 
     </TableRow>
@@ -128,10 +129,10 @@
           android:layout_height="70dip"
           android:layout_margin="4dip"
           android:layout_weight="1"
-          android:background="#000"
+          android:background="@color/bg_color"
           android:padding="10dip"
           android:text="@string/button_four"
-          android:textColor="#FFF"
+          android:textColor="@color/input_text_color"
           android:typeface="monospace" />
           
       <!-- Column 2 -->
@@ -142,10 +143,10 @@
           android:layout_height="70dip"
           android:layout_margin="4dip"
           android:layout_weight="1"
-          android:background="#000"
+          android:background="@color/bg_color"
           android:padding="10dip"
           android:text="@string/button_five"
-          android:textColor="#FFF"
+          android:textColor="@color/input_text_color"
           android:typeface="monospace" />
           
       <!-- Column 3 -->
@@ -156,10 +157,10 @@
           android:layout_height="70dip"
           android:layout_margin="4dip"
           android:layout_weight="1"
-          android:background="#000"
+          android:background="@color/bg_color"
           android:padding="10dip"
           android:text="@string/button_six"
-          android:textColor="#FFF"
+          android:textColor="@color/input_text_color"
           android:typeface="monospace" />
 
        <!-- Column 4 -->
@@ -170,10 +171,10 @@
           android:layout_height="70dip"
           android:layout_margin="4dip"
           android:layout_weight="1"
-          android:background="#000"
+          android:background="@color/bg_color"
           android:padding="10dip"
           android:text="@string/button_subtract"
-          android:textColor="#FFF"
+          android:textColor="@color/input_text_color"
           android:typeface="monospace" />
 
     </TableRow>
@@ -187,10 +188,10 @@
           android:layout_height="70dip"
           android:layout_margin="4dip"
           android:layout_weight="1"
-          android:background="#000"
+          android:background="@color/bg_color"
           android:padding="10dip"
           android:text="@string/button_one"
-          android:textColor="#FFF"
+          android:textColor="@color/input_text_color"
           android:typeface="monospace" />
           
       <!-- Column 2 -->
@@ -201,10 +202,10 @@
           android:layout_height="70dip"
           android:layout_margin="4dip"
           android:layout_weight="1"
-          android:background="#000"
+          android:background="@color/bg_color"
           android:padding="10dip"
           android:text="@string/button_two"
-          android:textColor="#FFF"
+          android:textColor="@color/input_text_color"
           android:typeface="monospace" />
           
       <!-- Column 3 -->
@@ -215,10 +216,10 @@
           android:layout_height="70dip"
           android:layout_margin="4dip"
           android:layout_weight="1"
-          android:background="#000"
+          android:background="@color/bg_color"
           android:padding="10dip"
           android:text="@string/button_three"
-          android:textColor="#FFF"
+          android:textColor="@color/input_text_color"
           android:typeface="monospace" />
 
        <!-- Column 4 -->
@@ -229,10 +230,10 @@
           android:layout_height="70dip"
           android:layout_margin="4dip"
           android:layout_weight="1"
-          android:background="#000"
+          android:background="@color/bg_color"
           android:padding="10dip"
           android:text="@string/button_multiply"
-          android:textColor="#FFF"
+          android:textColor="@color/input_text_color"
           android:typeface="monospace" />
 
     </TableRow>
@@ -246,10 +247,10 @@
           android:layout_height="70dip"
           android:layout_margin="4dip"
           android:layout_weight="1"
-          android:background="#000"
+          android:background="@color/bg_color"
           android:padding="10dip"
           android:text="@string/button_zero"
-          android:textColor="#FFF"
+          android:textColor="@color/input_text_color"
           android:typeface="monospace" />
           
       <!-- Column 2 -->
@@ -260,10 +261,10 @@
           android:layout_height="70dip"
           android:layout_margin="4dip"
           android:layout_weight="1"
-          android:background="#000"
+          android:background="@color/bg_color"
           android:padding="10dip"
           android:text="@string/button_decimal"
-          android:textColor="#FFF"
+          android:textColor="@color/input_text_color"
           android:typeface="monospace" />
           
       <!-- Column 3 -->
@@ -274,10 +275,10 @@
           android:layout_height="70dip"
           android:layout_margin="4dip"
           android:layout_weight="1"
-          android:background="#000"
+          android:background="@color/bg_color"
           android:padding="10dip"
           android:text="@string/button_equals"
-          android:textColor="#FFF"
+          android:textColor="@color/input_text_color"
           android:typeface="monospace" />
 
        <!-- Column 4 -->
@@ -288,10 +289,10 @@
           android:layout_height="70dip"
           android:layout_margin="4dip"
           android:layout_weight="1"
-          android:background="#000"
+          android:background="@color/bg_color"
           android:padding="10dip"
           android:text="@string/button_divide"
-          android:textColor="#FFF"
+          android:textColor="@color/input_text_color"
           android:typeface="monospace" />
 
     </TableRow>

@@ -132,10 +132,13 @@ int bool abc_config_actionMenuItemAllCaps 0x7f070005
 int bool abc_config_allowActionMenuItemTextWithIcon 0x7f070004
 int bool abc_config_showMenuShortcutsWhenKeyboardPresent 0x7f070003
 int bool abc_split_action_bar_is_narrow 0x7f070002
-int color abc_search_url_text_holo 0x7f080003
+int color abc_search_url_text_holo 0x7f080006
 int color abc_search_url_text_normal 0x7f080000
 int color abc_search_url_text_pressed 0x7f080002
 int color abc_search_url_text_selected 0x7f080001
+int color bg_color 0x7f080003
+int color input_text_color 0x7f080004
+int color output_text_color 0x7f080005
 int dimen abc_action_bar_default_height 0x7f060003
 int dimen abc_action_bar_icon_vertical_padding 0x7f060004
 int dimen abc_action_bar_progress_bar_size 0x7f06000b
@@ -247,8 +250,9 @@ int drawable abc_textfield_searchview_holo_dark 0x7f020053
 int drawable abc_textfield_searchview_holo_light 0x7f020054
 int drawable abc_textfield_searchview_right_holo_dark 0x7f020055
 int drawable abc_textfield_searchview_right_holo_light 0x7f020056
-int drawable ic_launcher 0x7f020057
-int drawable nums_logo 0x7f020058
+int drawable button_event 0x7f020057
+int drawable ic_launcher 0x7f020058
+int drawable nums_logo 0x7f020059
 int id action_bar 0x7f05002d
 int id action_bar_activity_content 0x7f050026
 int id action_bar_container 0x7f05002c
