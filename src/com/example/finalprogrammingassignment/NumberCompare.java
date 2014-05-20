@@ -40,6 +40,12 @@ public class NumberCompare extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 		
+		
+		
+		
+		
+		
+		/*
 		 final Button computeButton = (Button) findViewById((Integer) R.id.button2);
          computeButton.setOnClickListener(new View.OnClickListener() {
              public void onClick(View v) {
@@ -82,7 +88,12 @@ public class NumberCompare extends Activity {
             	 Minimize();
              }
          });
-         
+         */
+		
+		
+		
+		
+		
          
 
 	}
@@ -94,7 +105,7 @@ public class NumberCompare extends Activity {
 				//This method is called after Reset is pressed
 						public void Reset(){
 			
-							
+							/*
 							final TextView Field1Reset = (TextView) findViewById(R.id.editText1);
 							Field1Reset.setText(String.valueOf(""));
 							
@@ -106,6 +117,7 @@ public class NumberCompare extends Activity {
 							
 							final TextView LargestNumOutput = (TextView) findViewById(R.id.textView4);
 							LargestNumOutput.setText(R.string.outputStream);
+							*/
 					}
 				
 				
@@ -120,7 +132,7 @@ public class NumberCompare extends Activity {
 				
 					
 			public void Compute(){
-				
+				/*
 					//Acquire user input from editText form widgets (SORRY FOR AMBIGUOUS SAMENAME, I JUST CAUGHT IT)	
 					editText1 = (EditText) findViewById(R.id.editText1);
 					editText2 = (EditText) findViewById(R.id.editText2);
@@ -173,7 +185,7 @@ public class NumberCompare extends Activity {
 						LargestNumOutput.setText(String.valueOf(FieldTemp_Int));
 					
 					
-					
+					*/
 			
 					
 		}

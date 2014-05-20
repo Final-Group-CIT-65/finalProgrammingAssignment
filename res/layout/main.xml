@@ -1,130 +1,188 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    android:layoutMode="clipBounds"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".NumberCompare" >
+    android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/textView2"
+<TableLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:stretchColumns="1">
+ 
+    <TableRow>
+        <TextView
+            
+        android:id="@+id/outputField"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/imageView1"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_alignRight="@+id/button2"
-        android:layout_alignTop="@+id/imageView1"
-        android:text="@string/topMostCaption"
-        android:textColor="#000000"
-        android:textSize="26sp" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
-        android:text="@string/subCaption"
-        android:textColor="#666666" />
-
-    <EditText
-        
-        android:maxLength="8"
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_alignRight="@+id/textView2"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:inputType="number" >
-
-        <requestFocus />
-    </EditText>
-
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_alignRight="@+id/editText1"
-        android:layout_below="@+id/editText2"
-        android:ems="10"
-        android:inputType="number"
-        android:maxLength="8" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:text="@string/quitButton" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/outputCaption" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="17dp"
-        android:text="@string/outputStream"
+        android:layout_height="150dip"
+        android:layout_marginTop="17dp"    
         android:textColor="#009999"
-        android:textSize="24sp" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_alignRight="@+id/editText1"
-        android:layout_below="@+id/editText1"
-        android:ems="10"
-        android:inputType="number"
-        android:maxLength="8" />
-
-     <Button
-        android:id="@+id/button1"
-        android:layout_width="100sp"
-        android:layout_height="60sp"
-        android:layout_alignLeft="@+id/button3"
-        android:layout_alignParentStart="false"
-        android:layout_below="@+id/textView4"
-        android:layout_marginTop="30dp"
-        android:text="@string/resetButton" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="100sp"
-        android:layout_height="60sp"
-        android:layout_alignRight="@+id/button3"
-        android:layout_alignTop="@+id/button1"
-        android:text="@string/computeButton"
-        android:textSize="13sp" />
-
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="30sp"
-        android:layout_height="30sp"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_alignParentTop="false"
-        android:layout_toLeftOf="@+id/textView2"
-        android:baselineAlignBottom="true"
-        android:contentDescription="@string/LogoDesc"
-        android:cropToPadding="true"
-        android:src="@drawable/nums_logo" />
-
-</RelativeLayout>
+        android:textSize="24sp"
+        android:text="Output" />
+    </TableRow>
+    
+    <TableRow>
+      <!-- Column 1 -->
+      <TextView
+         android:id="@+id/buttonSeven"
+         android:layout_width="0dip"
+         android:layout_height="50dip"
+         android:padding="10dip"
+         android:layout_margin="4dip"
+         android:layout_weight="1"
+         android:text="7" />
+          
+      <!-- Column 2 -->
+      <TextView
+         android:id="@+id/buttonEight"
+         android:layout_width="0dip"
+         android:layout_height="wrap_content"
+         android:padding="10dip"
+         android:layout_margin="4dip"
+         android:layout_weight="1"
+         android:text="8" />
+          
+      <!-- Column 3 -->
+      <TextView
+         android:id="@+id/buttonNine"
+         android:layout_width="0dip"
+         android:layout_height="wrap_content"
+         android:padding="10dip"
+         android:layout_margin="4dip"
+         android:layout_weight="1"
+         android:text="9" />
+       <!-- Column 4 -->
+      <TextView
+         android:id="@+id/buttonAdd"
+         android:layout_width="0dip"
+         android:layout_height="wrap_content"
+         android:padding="10dip"
+         android:layout_margin="4dip"
+         android:layout_weight="1"
+         android:text="+" />
+    </TableRow>
+    
+    <TableRow>
+      <!-- Column 1 -->
+      <TextView
+         android:id="@+id/buttonFour"
+         android:layout_width="0dip"
+         android:layout_height="50dip"
+         android:padding="10dip"
+         android:layout_margin="4dip"
+         android:layout_weight="1"
+         android:text="4" />
+          
+      <!-- Column 2 -->
+      <TextView
+         android:id="@+id/buttonFive"
+         android:layout_width="0dip"
+         android:layout_height="wrap_content"
+         android:padding="10dip"
+         android:layout_margin="4dip"
+         android:layout_weight="1"
+         android:text="5" />
+          
+      <!-- Column 3 -->
+      <TextView
+         android:id="@+id/buttonSix"
+         android:layout_width="0dip"
+         android:layout_height="wrap_content"
+         android:padding="10dip"
+         android:layout_margin="4dip"
+         android:layout_weight="1"
+         android:text="6" />
+       <!-- Column 4 -->
+      <TextView
+         android:id="@+id/buttonSubtract"
+         android:layout_width="0dip"
+         android:layout_height="wrap_content"
+         android:padding="10dip"
+         android:layout_margin="4dip"
+         android:layout_weight="1"
+         android:text="-" />
+    </TableRow>
+    
+    <TableRow>
+      <!-- Column 1 -->
+      <TextView
+         android:id="@+id/buttonOne"
+         android:layout_width="0dip"
+         android:layout_height="50dip"
+         android:padding="10dip"
+         android:layout_margin="4dip"
+         android:layout_weight="1"
+         android:text="1" />
+          
+      <!-- Column 2 -->
+      <TextView
+         android:id="@+id/buttonTwo"
+         android:layout_width="0dip"
+         android:layout_height="wrap_content"
+         android:padding="10dip"
+         android:layout_margin="4dip"
+         android:layout_weight="1"
+         android:text="2" />
+          
+      <!-- Column 3 -->
+      <TextView
+         android:id="@+id/buttonThree"
+         android:layout_width="0dip"
+         android:layout_height="wrap_content"
+         android:padding="10dip"
+         android:layout_margin="4dip"
+         android:layout_weight="1"
+         android:text="3" />
+       <!-- Column 4 -->
+      <TextView
+         android:id="@+id/buttonMultiply"
+         android:layout_width="0dip"
+         android:layout_height="wrap_content"
+         android:padding="10dip"
+         android:layout_margin="4dip"
+         android:layout_weight="1"
+         android:text="*" />
+    </TableRow>
+    
+    <TableRow>
+      <!-- Column 1 -->
+      <TextView
+         android:id="@+id/buttonZero"
+         android:layout_width="0dip"
+         android:layout_height="50dip"
+         android:padding="10dip"
+         android:layout_margin="4dip"
+         android:layout_weight="1"
+         android:text="0" />
+          
+      <!-- Column 2 -->
+      <TextView
+         android:id="@+id/buttonDecimalPoint"
+         android:layout_width="0dip"
+         android:layout_height="wrap_content"
+         android:padding="10dip"
+         android:layout_margin="4dip"
+         android:layout_weight="1"
+         android:text="." />
+          
+      <!-- Column 3 -->
+      <TextView
+         android:id="@+id/buttonEquals"
+         android:layout_width="0dip"
+         android:layout_height="wrap_content"
+         android:padding="10dip"
+         android:layout_margin="4dip"
+         android:layout_weight="1"
+         android:text="=" />
+       <!-- Column 4 -->
+      <TextView
+         android:id="@+id/buttonDivide"
+         android:layout_width="0dip"
+         android:layout_height="wrap_content"
+         android:padding="10dip"
+         android:layout_margin="4dip"
+         android:layout_weight="1"
+         android:text="/" />
+    </TableRow>
+</TableLayout>
+</LinearLayout>
