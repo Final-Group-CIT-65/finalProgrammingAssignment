@@ -1,61 +1,37 @@
 package com.example.finalprogrammingassignment;
 
 import com.example.finalprogrammingassignment.R;
-
-//import android.R.id;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
-
 import android.widget.TextView;
 
 
-public class NumberCompare extends Activity {
-
-	//Final variables relevant to input and output.
-	//These variables are global because they are fundamentally relevant to the entire program.
-		//Also, they're final, so it's kind of like having global constants. 
-	
-	
-	public Button buttonZero;
-	public Button buttonOne;
-	public Button buttonTwo;
-	public Button buttonThree;
-	public Button buttonFour;
-	public Button buttonFive;
-	public Button buttonSix;
-	public Button buttonSeven;
-	public Button buttonEight;
-	public Button buttonNine;
-	public Button buttonAdd;
-	public Button buttonSubtract;
-	public Button buttonMultiply;
-	public Button buttonDivide;
-	public Button buttonReset;
-	public Button buttonDelete;
+public class SimpleCalc extends Activity {
 	
 	//Output string
 		//This variable is not final or constant because it is very much relevant to the entire program,
 		//it is changed throughout the program,
 		//and thus it's scope is global to the program. 
-		//Excuse me while I ask the gods of good programming practices for forgiveness. 
-	String textOut = "";
-	
-	
-	
-	
+		//Excuse me while I beg the gods of good programming practices for forgiveness. 
+	public String textOut = "";
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 		
+		//Final variables relevant to input and output. 
 		
-		//Global output field
+		//This is the object for when the '=' button is pressed
+		final CalculationEngine calcEng = new CalculationEngine();
+		
+		//Output field
 		final TextView outputField = (TextView) findViewById((Integer)R.id.outputField);
 		
-		//Global Buttons
+		//Buttons
 		final Button buttonZero = (Button) findViewById((Integer) R.id.buttonZero);
 		final Button buttonDecimal = (Button) findViewById((Integer)R.id.buttonDecimal);
 		final Button buttonEquals = (Button) findViewById((Integer)R.id.buttonEquals);
@@ -100,8 +76,9 @@ public class NumberCompare extends Activity {
 		
 		buttonEquals.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-            	// Call calculation method //
-            	
+            	// Call the calculation method of the calcEng object //     	
+            	textOut = calcEng.calculate(textOut);
+
            		outputField.setText(textOut);
             }
         });
