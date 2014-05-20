@@ -1,0 +1,72 @@
+//This is intended as pseudocode, not compilable Java
+
+//global variables:
+double oldNumber, newNumber;
+char operation;
+int decimalPlace;
+
+public static void class Calculator(string args[]);
+{
+    {
+        oldNumber = 0;
+        operation = '+';
+        clearEntry();
+        create buttons:
+            1 2 3 4 5 6 7 8 9 0 + - * / = C CE
+        create textbox; display newNumber in textbox;
+    }
+
+    void append(int i)
+    {
+        if(decimalPlace == 0) newNumber = 10 * newNumber + i;
+        else
+    {
+        newNumber += i * pow(10, decimalPlace);
+        decimalPlace--;
+    }
+    display newNumber in textBox;
+}
+        
+class buttonPress(event e) extends actionListener:
+{
+    switch (e)
+    {
+        case 0:  {append(0); break;}
+        case 1:  {append(1); break;}
+        etc.
+
+        case +:  {operation = '+'; break;}
+        case -:  {operation = '-'; break;}
+        etc.
+
+        case CE:  {newNumber = 0; display 0 in textbox; break;}
+        case C:   {oldNumber = newNumber = 0; operation = '+'; display 0 in textbox; break;}
+
+        case =:
+        {
+            switch (operation)
+            {
+                case +:  {oldNumber += newNumber; newNumber = 0; operation = '+'; display oldNumber in textbox; break;}
+                case -:  {oldNumber -= newNumber; newNumber = 0; operation = '+'; display oldNumber in textbox; break;}
+                case *:  {oldNumber *= newNumber; newNumber = 0; operation = '+'; display oldNumber in textbox; break;}
+                case /:
+                {
+                    if(newNumber == 0)
+                    {
+                        display "Error" in textbox;
+                        oldNumber = newNumber = 0;
+                        operation = '+'; 
+                    }
+                    else
+                    {
+                         oldNumber /= newNumber;
+                         clearEntry();
+                         display oldNumber in textbox;
+                    }
+                    break;
+                 }
+             }
+         }
+    }
+}
+

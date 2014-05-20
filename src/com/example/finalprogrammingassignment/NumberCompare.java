@@ -103,7 +103,7 @@ public class NumberCompare extends Activity {
 	
 				
 				//This method is called after Reset is pressed
-						public void Reset(){
+					public void Reset(){
 			
 							/*
 							final TextView Field1Reset = (TextView) findViewById(R.id.editText1);
