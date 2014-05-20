@@ -1,188 +1,298 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
 
-<TableLayout 
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:stretchColumns="1">
  
+    
+    <!-- OUTPUT FIELD -->
+    
     <TableRow>
+
         <TextView
-            
-        android:id="@+id/outputField"
-        android:layout_width="wrap_content"
-        android:layout_height="150dip"
-        android:layout_marginTop="17dp"    
-        android:textColor="#009999"
-        android:textSize="24sp"
-        android:text="Output" />
+            android:id="@+id/outputField"
+            android:layout_width="wrap_content"
+            android:layout_height="60dip"
+            android:layout_marginTop="17dp"
+            android:background="#000"
+            android:padding="10dp"
+            android:text="@string/output"
+            android:textColor="#009999"
+            android:textSize="24sp"
+            android:typeface="monospace" />
+
+    </TableRow>
+    
+    
+    
+    <!-- BUTTONS -->
+    
+    <TableRow>
+        <!-- Column 1 -->
+
+        <Button
+            android:id="@+id/buttonReset"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dip"
+            android:layout_weight="1"
+            android:background="#000"
+            android:padding="10dip"
+            android:text="@string/button_reset"
+            android:textColor="#FFF"
+            android:typeface="monospace" />
+        
+      <!-- Column 2 -->
+
+      <Button
+          android:id="@+id/buttonDelete"
+          android:layout_width="0dip"
+          android:layout_height="wrap_content"
+          android:layout_margin="4dip"
+          android:layout_weight="1"
+          android:background="#000"
+          android:padding="10dip"
+          android:text="@string/button_delete"
+          android:textColor="#FFF"
+          android:typeface="monospace" />
+
     </TableRow>
     
     <TableRow>
       <!-- Column 1 -->
-      <TextView
-         android:id="@+id/buttonSeven"
-         android:layout_width="0dip"
-         android:layout_height="50dip"
-         android:padding="10dip"
-         android:layout_margin="4dip"
-         android:layout_weight="1"
-         android:text="7" />
+
+      <Button
+          android:id="@+id/buttonSeven"
+          android:layout_width="0dip"
+          android:layout_height="70dip"
+          android:layout_margin="4dip"
+          android:layout_weight="1"
+          android:background="#000"
+          android:padding="10dip"
+          android:text="@string/button_seven"
+          android:textColor="#FFF"
+          android:typeface="monospace" />
           
       <!-- Column 2 -->
-      <TextView
-         android:id="@+id/buttonEight"
-         android:layout_width="0dip"
-         android:layout_height="wrap_content"
-         android:padding="10dip"
-         android:layout_margin="4dip"
-         android:layout_weight="1"
-         android:text="8" />
+
+      <Button
+          android:id="@+id/buttonEight"
+          android:layout_width="0dip"
+          android:layout_height="70dip"
+          android:layout_margin="4dip"
+          android:layout_weight="1"
+          android:background="#000"
+          android:padding="10dip"
+          android:text="@string/button_eight"
+          android:textColor="#FFF"
+          android:typeface="monospace" />
           
       <!-- Column 3 -->
-      <TextView
-         android:id="@+id/buttonNine"
-         android:layout_width="0dip"
-         android:layout_height="wrap_content"
-         android:padding="10dip"
-         android:layout_margin="4dip"
-         android:layout_weight="1"
-         android:text="9" />
+
+      <Button
+          android:id="@+id/buttonNine"
+          android:layout_width="0dip"
+          android:layout_height="70dip"
+          android:layout_margin="4dip"
+          android:layout_weight="1"
+          android:background="#000"
+          android:padding="10dip"
+          android:text="@string/button_nine"
+          android:textColor="#FFF"
+          android:typeface="monospace" />
+
        <!-- Column 4 -->
-      <TextView
-         android:id="@+id/buttonAdd"
-         android:layout_width="0dip"
-         android:layout_height="wrap_content"
-         android:padding="10dip"
-         android:layout_margin="4dip"
-         android:layout_weight="1"
-         android:text="+" />
+
+      <Button
+          android:id="@+id/buttonAdd"
+          android:layout_width="0dip"
+          android:layout_height="70dip"
+          android:layout_margin="4dip"
+          android:layout_weight="1"
+          android:background="#000"
+          android:padding="10dp"
+          android:text="@string/button_add"
+          android:textColor="#FFF"
+          android:typeface="monospace" />
+
     </TableRow>
     
     <TableRow>
       <!-- Column 1 -->
-      <TextView
-         android:id="@+id/buttonFour"
-         android:layout_width="0dip"
-         android:layout_height="50dip"
-         android:padding="10dip"
-         android:layout_margin="4dip"
-         android:layout_weight="1"
-         android:text="4" />
+
+      <Button
+          android:id="@+id/buttonFour"
+          android:layout_width="0dip"
+          android:layout_height="70dip"
+          android:layout_margin="4dip"
+          android:layout_weight="1"
+          android:background="#000"
+          android:padding="10dip"
+          android:text="@string/button_four"
+          android:textColor="#FFF"
+          android:typeface="monospace" />
           
       <!-- Column 2 -->
-      <TextView
-         android:id="@+id/buttonFive"
-         android:layout_width="0dip"
-         android:layout_height="wrap_content"
-         android:padding="10dip"
-         android:layout_margin="4dip"
-         android:layout_weight="1"
-         android:text="5" />
+
+      <Button
+          android:id="@+id/buttonFive"
+          android:layout_width="0dip"
+          android:layout_height="70dip"
+          android:layout_margin="4dip"
+          android:layout_weight="1"
+          android:background="#000"
+          android:padding="10dip"
+          android:text="@string/button_five"
+          android:textColor="#FFF"
+          android:typeface="monospace" />
           
       <!-- Column 3 -->
-      <TextView
-         android:id="@+id/buttonSix"
-         android:layout_width="0dip"
-         android:layout_height="wrap_content"
-         android:padding="10dip"
-         android:layout_margin="4dip"
-         android:layout_weight="1"
-         android:text="6" />
+
+      <Button
+          android:id="@+id/buttonSix"
+          android:layout_width="0dip"
+          android:layout_height="70dip"
+          android:layout_margin="4dip"
+          android:layout_weight="1"
+          android:background="#000"
+          android:padding="10dip"
+          android:text="@string/button_six"
+          android:textColor="#FFF"
+          android:typeface="monospace" />
+
        <!-- Column 4 -->
-      <TextView
-         android:id="@+id/buttonSubtract"
-         android:layout_width="0dip"
-         android:layout_height="wrap_content"
-         android:padding="10dip"
-         android:layout_margin="4dip"
-         android:layout_weight="1"
-         android:text="-" />
+
+      <Button
+          android:id="@+id/buttonSubtract"
+          android:layout_width="0dip"
+          android:layout_height="70dip"
+          android:layout_margin="4dip"
+          android:layout_weight="1"
+          android:background="#000"
+          android:padding="10dip"
+          android:text="@string/button_subtract"
+          android:textColor="#FFF"
+          android:typeface="monospace" />
+
     </TableRow>
     
     <TableRow>
       <!-- Column 1 -->
-      <TextView
-         android:id="@+id/buttonOne"
-         android:layout_width="0dip"
-         android:layout_height="50dip"
-         android:padding="10dip"
-         android:layout_margin="4dip"
-         android:layout_weight="1"
-         android:text="1" />
+
+      <Button
+          android:id="@+id/buttonOne"
+          android:layout_width="0dip"
+          android:layout_height="70dip"
+          android:layout_margin="4dip"
+          android:layout_weight="1"
+          android:background="#000"
+          android:padding="10dip"
+          android:text="@string/button_one"
+          android:textColor="#FFF"
+          android:typeface="monospace" />
           
       <!-- Column 2 -->
-      <TextView
-         android:id="@+id/buttonTwo"
-         android:layout_width="0dip"
-         android:layout_height="wrap_content"
-         android:padding="10dip"
-         android:layout_margin="4dip"
-         android:layout_weight="1"
-         android:text="2" />
+
+      <Button
+          android:id="@+id/buttonTwo"
+          android:layout_width="0dip"
+          android:layout_height="70dip"
+          android:layout_margin="4dip"
+          android:layout_weight="1"
+          android:background="#000"
+          android:padding="10dip"
+          android:text="@string/button_two"
+          android:textColor="#FFF"
+          android:typeface="monospace" />
           
       <!-- Column 3 -->
-      <TextView
-         android:id="@+id/buttonThree"
-         android:layout_width="0dip"
-         android:layout_height="wrap_content"
-         android:padding="10dip"
-         android:layout_margin="4dip"
-         android:layout_weight="1"
-         android:text="3" />
+
+      <Button
+          android:id="@+id/buttonThree"
+          android:layout_width="0dip"
+          android:layout_height="70dip"
+          android:layout_margin="4dip"
+          android:layout_weight="1"
+          android:background="#000"
+          android:padding="10dip"
+          android:text="@string/button_three"
+          android:textColor="#FFF"
+          android:typeface="monospace" />
+
        <!-- Column 4 -->
-      <TextView
-         android:id="@+id/buttonMultiply"
-         android:layout_width="0dip"
-         android:layout_height="wrap_content"
-         android:padding="10dip"
-         android:layout_margin="4dip"
-         android:layout_weight="1"
-         android:text="*" />
+
+      <Button
+          android:id="@+id/buttonMultiply"
+          android:layout_width="0dip"
+          android:layout_height="70dip"
+          android:layout_margin="4dip"
+          android:layout_weight="1"
+          android:background="#000"
+          android:padding="10dip"
+          android:text="@string/button_multiply"
+          android:textColor="#FFF"
+          android:typeface="monospace" />
+
     </TableRow>
     
     <TableRow>
       <!-- Column 1 -->
-      <TextView
-         android:id="@+id/buttonZero"
-         android:layout_width="0dip"
-         android:layout_height="50dip"
-         android:padding="10dip"
-         android:layout_margin="4dip"
-         android:layout_weight="1"
-         android:text="0" />
+
+      <Button
+          android:id="@+id/buttonZero"
+          android:layout_width="0dip"
+          android:layout_height="70dip"
+          android:layout_margin="4dip"
+          android:layout_weight="1"
+          android:background="#000"
+          android:padding="10dip"
+          android:text="@string/button_zero"
+          android:textColor="#FFF"
+          android:typeface="monospace" />
           
       <!-- Column 2 -->
-      <TextView
-         android:id="@+id/buttonDecimalPoint"
-         android:layout_width="0dip"
-         android:layout_height="wrap_content"
-         android:padding="10dip"
-         android:layout_margin="4dip"
-         android:layout_weight="1"
-         android:text="." />
+
+      <Button
+          android:id="@+id/buttonDecimal"
+          android:layout_width="0dip"
+          android:layout_height="70dip"
+          android:layout_margin="4dip"
+          android:layout_weight="1"
+          android:background="#000"
+          android:padding="10dip"
+          android:text="@string/button_decimal"
+          android:textColor="#FFF"
+          android:typeface="monospace" />
           
       <!-- Column 3 -->
-      <TextView
-         android:id="@+id/buttonEquals"
-         android:layout_width="0dip"
-         android:layout_height="wrap_content"
-         android:padding="10dip"
-         android:layout_margin="4dip"
-         android:layout_weight="1"
-         android:text="=" />
+
+      <Button
+          android:id="@+id/buttonEquals"
+          android:layout_width="0dip"
+          android:layout_height="70dip"
+          android:layout_margin="4dip"
+          android:layout_weight="1"
+          android:background="#000"
+          android:padding="10dip"
+          android:text="@string/button_equals"
+          android:textColor="#FFF"
+          android:typeface="monospace" />
+
        <!-- Column 4 -->
-      <TextView
-         android:id="@+id/buttonDivide"
-         android:layout_width="0dip"
-         android:layout_height="wrap_content"
-         android:padding="10dip"
-         android:layout_margin="4dip"
-         android:layout_weight="1"
-         android:text="/" />
+
+      <Button
+          android:id="@+id/buttonDivide"
+          android:layout_width="0dip"
+          android:layout_height="70dip"
+          android:layout_margin="4dip"
+          android:layout_weight="1"
+          android:background="#000"
+          android:padding="10dip"
+          android:text="@string/button_divide"
+          android:textColor="#FFF"
+          android:typeface="monospace" />
+
     </TableRow>
 </TableLayout>
-</LinearLayout>
