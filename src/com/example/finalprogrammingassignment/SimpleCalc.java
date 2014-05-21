@@ -17,6 +17,7 @@ public class SimpleCalc extends Activity {
 		//and thus it's scope is global to the program. 
 		//Excuse me while I beg the gods of good programming practices for forgiveness. 
 	public String textOut = "";
+	public boolean isCalculated=false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +26,7 @@ public class SimpleCalc extends Activity {
 		
 		//Final variables relevant to input and output. 
 		
-		//This is the object for when the '=' button is pressed
+		//This is the object that is manipulated when the '=' button is pressed
 		final CalculationEngine calcEng = new CalculationEngine();
 		
 		//Output field
@@ -58,6 +59,9 @@ public class SimpleCalc extends Activity {
 		
 		buttonZero.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+            	
+            	
+            	checkIfCalculated();
             	// Append a '0' to the string //
             	textOut+='0';
             	
@@ -67,6 +71,9 @@ public class SimpleCalc extends Activity {
 		
 		buttonDecimal.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+            	
+            	checkIfCalculated();
+            	
             	// Append a '.' to the string //
             	textOut+='.';
             	
@@ -77,14 +84,16 @@ public class SimpleCalc extends Activity {
 		buttonEquals.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
             	// Call the calculation method of the calcEng object //     	
-            	textOut = calcEng.calculate(textOut);
-
+            	textOut = calcEng.doCalc(textOut);
+            	
+            	isCalculated = true;
            		outputField.setText(textOut);
             }
         });
 		
 		buttonDivide.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+            	checkIfCalculated();
             	// Append a '/' to the string //
             	textOut+='/';
             	
@@ -94,6 +103,7 @@ public class SimpleCalc extends Activity {
 		
 		buttonOne.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+            	checkIfCalculated();
             	// Append a '1' to the string //
             	textOut+='1';
             	
@@ -103,6 +113,7 @@ public class SimpleCalc extends Activity {
 		
 		buttonTwo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+            	checkIfCalculated();
             	// Append a '2' to the string //
             	textOut+='2';
             	
@@ -112,6 +123,7 @@ public class SimpleCalc extends Activity {
 		
 		buttonThree.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+            	checkIfCalculated();
             	// Append a '3' to the string //
             	textOut+='3';
             	
@@ -121,6 +133,7 @@ public class SimpleCalc extends Activity {
 		
 		buttonMultiply.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+            	checkIfCalculated();
             	// Append a '*' to the string //
             	textOut+='*';
             	
@@ -130,6 +143,7 @@ public class SimpleCalc extends Activity {
 		
 		buttonFour.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+            	checkIfCalculated();
             	// Append a '4' to the string //
             	textOut+='4';
             	
@@ -139,6 +153,7 @@ public class SimpleCalc extends Activity {
 		
 		buttonFive.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+            	checkIfCalculated();
             	// Append a '5' to the string //
             	textOut+='5';
             	
@@ -148,6 +163,7 @@ public class SimpleCalc extends Activity {
 		
 		buttonSix.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+            	checkIfCalculated();
             	// Append a '6' to the string //
             	textOut+='6';
             	
@@ -157,6 +173,7 @@ public class SimpleCalc extends Activity {
 		
 		buttonSubtract.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+            	checkIfCalculated();
             	// Append a '-' to the string //
             	textOut+='-';
             	
@@ -166,6 +183,7 @@ public class SimpleCalc extends Activity {
 		
 		buttonSeven.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+            	checkIfCalculated();
             	// Append a '7' to the string //
             	textOut+='7';
             	
@@ -175,6 +193,7 @@ public class SimpleCalc extends Activity {
 		
 		buttonEight.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+            	checkIfCalculated();
             	// Append a '8' to the string //
             	textOut+='8';
             	
@@ -184,6 +203,7 @@ public class SimpleCalc extends Activity {
 		
 		buttonNine.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+            	checkIfCalculated();
             	// Append a '9' to the string //
             	textOut+='9';
             	
@@ -193,6 +213,7 @@ public class SimpleCalc extends Activity {
 		
 		buttonAdd.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+            	checkIfCalculated();
             	// Append a '+' to the string //
             	textOut+='+';
             	
@@ -225,7 +246,12 @@ public class SimpleCalc extends Activity {
 	}
 	
 	
-		
+	public void checkIfCalculated(){
+		if(isCalculated){
+    		textOut = "";
+    		isCalculated = false;
+    	}
+	}
 				
 	
 
