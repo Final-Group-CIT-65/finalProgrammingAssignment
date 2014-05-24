@@ -1,15 +1,34 @@
 package com.example.finalprogrammingassignment;
 
+
+
 import com.example.finalprogrammingassignment.R;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
+
+
 
 
 public class SimpleCalc extends Activity {
+	//For debugging, if you couldn't tell. 
+	public final boolean DEBUG = false;
 	
 	//Output string
 		//This variable is not final or constant because it is very much relevant to the entire program,
@@ -17,12 +36,19 @@ public class SimpleCalc extends Activity {
 		//and thus it's scope is global to the program. 
 		//Excuse me while I beg the gods of good programming practices for forgiveness. 
 	public String textOut = "";
+	
+	//For resetting the output string.
 	public boolean isCalculated=false;
+	
+	//History list (list of output field strings after '=' is pressed). 
+		//It is implemented as an array list.
+	public ArrayList<String> historyList = new ArrayList<String>();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
+		
 		
 		//Final variables relevant to input and output. 
 		
@@ -31,6 +57,11 @@ public class SimpleCalc extends Activity {
 		
 		//Output field
 		final TextView outputField = (TextView) findViewById((Integer)R.id.outputField);
+		
+		
+		
+		//File name for saving historyList 
+		final String historyFileName = "history.list";
 		
 		//Buttons
 		final Button buttonZero = (Button) findViewById((Integer) R.id.buttonZero);
@@ -55,6 +86,26 @@ public class SimpleCalc extends Activity {
 		
 		final Button buttonReset = (Button) findViewById((Integer)R.id.buttonReset);
 		final Button buttonDelete = (Button) findViewById((Integer)R.id.buttonDelete);
+		
+		//READS FILE CONTENTS INTO ARRAYLIST historyList
+		try{ 
+			FileInputStream fin = openFileInput(historyFileName);
+			Scanner s = new Scanner(fin);
+			historyList.clear();
+			
+			while (s.hasNext()){
+			    historyList.add(s.next());
+			    if(DEBUG)
+					System.out.println(s.next());
+			}
+			s.close();
+	    }catch(Exception e){
+	    	System.out.println("File read exception.");
+	    }//End try/catch 
+		
+		
+		
+		
 		
 		
 		buttonZero.setOnClickListener(new View.OnClickListener() {
@@ -88,6 +139,54 @@ public class SimpleCalc extends Activity {
             	
             	isCalculated = true;
            		outputField.setText(textOut);
+           		
+           		//APPEND textOut TO historyList HERE
+           		historyList.add(textOut);
+           		
+           		//SAVE ARRAYLIST historyList TO FILE
+           		try { //OUTPUT ROUTINE FOR HISTORY LIST FILE
+        			FileOutputStream fout = openFileOutput(historyFileName, MODE_PRIVATE);
+        			for(int i=0; i<=historyList.size()-1; i++){
+        				
+        				try {
+							fout.write(historyList.get(i).getBytes());
+							if(DEBUG)
+								System.out.println(historyList.get(i).getBytes());
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							if(DEBUG)
+								System.out.println("Output file not saved");
+							e.printStackTrace();
+						}//end FIRST INNER try/catch
+        				
+        				try {
+							fout.close();
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							if(DEBUG)
+								System.out.println("Output file not closed");
+							e.printStackTrace();
+						}//end SECOND INNER try/catch
+        				
+        			}//END FOR
+        			
+        		} catch (FileNotFoundException e) {
+        			// TODO Auto-generated catch block
+        			if(DEBUG)
+						System.out.println("Output file not found");
+        			e.printStackTrace();
+        		}//end OUTERMOST try/catch
+           		
+           		
+           		
+           		
+           		
+           		if(DEBUG){
+	           		for(int i=0; i<=historyList.size()-1; i++){
+	           			System.out.println(historyList.get(i));
+	           		}
+           		}
+           		
             }
         });
 		
@@ -224,8 +323,8 @@ public class SimpleCalc extends Activity {
 		buttonReset.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
             	// Clear the string //
-            	textOut ="";
-            	
+            	textOut = "";
+            	checkIfCalculated();
            		outputField.setText(textOut);
             }
         });
@@ -235,7 +334,7 @@ public class SimpleCalc extends Activity {
             	// Remove last character from the string if string is not empty //
             	if(textOut.length()>=1)
             		textOut = textOut.substring(0, textOut.length() - 1);
-            	
+            	isCalculated=false;
            		outputField.setText(textOut);
             }
         });

@@ -3,8 +3,14 @@ package com.example.finalprogrammingassignment;
 public class CalculationEngine {
 	
 	
+	public final boolean DEBUG = false;
+	
+	
+	
+	
 	public int index;
 	public int recursionLevel;
+	
 	
 	//Constructor
 	public CalculationEngine(){
@@ -117,15 +123,16 @@ public class CalculationEngine {
 		double num1, num2, answer;
 		if(index != -1)
 		{
-			System.out.print(expression + "=");
+			if(DEBUG)
+				System.out.print(expression + "=");
 		    if(index == 0) num1 = 0;
 		    else num1 = Double.parseDouble(this.calculate(expression.substring(0, index)));
 		    if(index == expression.length() - 1) num2 = 0;
 		    else num2 = Double.parseDouble(this.calculate(expression.substring(index + 1)));
 		    answer = num1 + num2;
 		    expression = String.valueOf(answer);
-		    
-		    System.out.println(expression);
+		    if(DEBUG)
+		    	System.out.println(expression);
 		}
 		return expression;
 	}
@@ -134,16 +141,17 @@ public class CalculationEngine {
 		index = expression.lastIndexOf("-");
 		double num1, num2, answer;
 		if(index != -1)
-		{
-			System.out.print(expression + "=");
+		{	
+			if(DEBUG)
+				System.out.print(expression + "=");
 		    if(index == 0) num1 = 0;
 		    else num1 = Double.parseDouble(this.calculate(expression.substring(0, index)));
 		    if(index == expression.length() - 1) num2 = 0;
 		    else num2 = Double.parseDouble(this.calculate(expression.substring(index + 1)));
 		    answer = num1 - num2;
 		    expression = String.valueOf(answer);
-		    
-		    System.out.println(expression);
+		    if(DEBUG)
+		    	System.out.println(expression);
 		}
 		return expression;
 	}
@@ -153,15 +161,16 @@ public class CalculationEngine {
 		double num1, num2, answer;
 		if(index != -1)
 		{
-			System.out.print(expression + "=");
+			if(DEBUG)
+				System.out.print(expression + "=");
 		    if(index == 0) num1 = 1;
 		    else num1 = Double.parseDouble(this.calculate(expression.substring(0, index)));
 		    if(index == expression.length() - 1) num2 = 1;
 		    else num2 = Double.parseDouble(this.calculate(expression.substring(index + 1)));
 		    answer = num1 * num2;
 		    expression = String.valueOf(answer);
-		    
-		    System.out.println(expression);
+		    if(DEBUG)
+		    	System.out.println(expression);
 		}
 		return expression;
 	}
@@ -171,15 +180,16 @@ public class CalculationEngine {
 		double num1, num2, answer;
 		if(index != -1)
 		{
-			System.out.print(expression + "=");
+			if(DEBUG)
+				System.out.print(expression + "=");
 		    if(index == 0) num1 = 1;
 		    else num1 = Double.parseDouble(this.calculate(expression.substring(0, index)));
 		    if(index == expression.length() - 1) num2 = 1;
 		    else num2 = Double.parseDouble(this.calculate(expression.substring(index + 1)));
 		    answer = num1 / num2;
 		    expression = String.valueOf(answer);
-		    
-		    System.out.println(expression);
+		    if(DEBUG)
+		    	System.out.println(expression);
 		}
 		return expression;
 	}
